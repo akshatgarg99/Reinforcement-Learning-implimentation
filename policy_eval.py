@@ -20,9 +20,9 @@ def policy_eval(policy, env, discount_factor=1, theta=0.00001):
     return np.array(V)
 
 
-
-print('running')
-random_policy = np.ones([env.nS, env.nA]) / env.nA
-v = policy_eval(random_policy, env)
-print(v)
+if __name__ == "__main__":
+    print('running')
+    random_policy = np.ones([env.nS, env.nA]) / env.nA
+    v = policy_eval(random_policy, env)
+    print(v)
 
