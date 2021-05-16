@@ -1,8 +1,6 @@
 from env import gridworld
 import numpy as np
 
-env = gridworld.GridworldEnv()
-
 
 def policy_eval(policy, env, discount_factor=1, theta=0.00001):
     V = np.zeros(env.nS)
@@ -22,6 +20,7 @@ def policy_eval(policy, env, discount_factor=1, theta=0.00001):
 
 if __name__ == "__main__":
     print('running')
+    env = gridworld.GridworldEnv()
     random_policy = np.ones([env.nS, env.nA]) / env.nA
     v = policy_eval(random_policy, env)
     print(v)
